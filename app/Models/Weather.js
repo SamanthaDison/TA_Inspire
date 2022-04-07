@@ -1,0 +1,1 @@
+// for this model need url for openweathermap and interpolate the icon from the api in the url
