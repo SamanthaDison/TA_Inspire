@@ -3,6 +3,7 @@ export class Todo {
     constructor(data) {
         this.id = data.id
         this.isComplete = data.complete
+        this.user = data.user
         this.description = data.description
     }
 }
