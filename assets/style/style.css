@@ -29,7 +29,14 @@
 }
 
 .todo-form {
-    pabbin
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(121, 119, 119);
+    width: 100%;
+}
+
+::placeholder {
+    color: whitesmoke;
 }
 
 /* REVIEW will probably need to position-abosolute elems in this row... doing the whole row messes up formatting */

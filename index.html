@@ -51,19 +51,32 @@
           </div>
         </div>
       </div>
-      <div class="row justify-content-end">
-        <div class="col-4 d-flex justify-content-end">
-          <div class="bg-white todos-display" id="todos">
-            <p>todos will go here</p>
+      <div class="row justify-content-end" id="todo-row">
+        <div class="col-4 d-flex justify-content-end todo-col">
+          <div class=" todo-display p-2" id="todo-display">
+            <div class="text-center" id="todo-list">
+              <p>todos will go here</p>
+              <p class="m-0">Get Motivated!</p>
+              <p class="m-0 pb-2">Add a todo</p>
+              <button onclick="app.todosController.showTodoForm()" class="todo-button" id="todo-button">New
+                todo</button>
+            </div>
+            <div class="display-none px-2 pt-5" id="todo-form">
+              <form onsubmit="app.todosController.createTodo()">
+                <input class="todo-form" type="text" name="todo" placeholder="New Todo">
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      <div class="row bottom-row">
-        <div class="col-1"></div>
-        <div class="col-10 d-flex justify-content-center">
-          <p>quote will go here</p>
+      <div class="row justify-content-center">
+        <div class="col-10  justify-content-center bottom-row">
+          <div>
+            <p class="quote">quote will go here</p>
+            <p class="quote-author">quote author here</p>
+          </div>
         </div>
-        <div class="col-1 d-flex justify-content-center">
+        <div class="col-1 justify-content-end bottom-row right pb-2">
           <!-- on click toggle display of the todos div -->
           <button onclick="app.todosController.showTodos()" class="btn btn-primary rounded">Todo</button>
         </div>
