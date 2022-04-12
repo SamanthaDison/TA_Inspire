@@ -22,6 +22,11 @@ class TodosService {
         throw new Error("Method not implemented.");
     }
 
+    async deleteTodo(todoId) {
+        const res = await api.delete(`sammid/todos/${todoId}`)
+        console.log(res.data)
+        ProxyState.todos = ProxyState.todos.filter(t => t.id != todoId)
+    }
 }
 
 export const todosService = new TodosService()

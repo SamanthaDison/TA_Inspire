@@ -51,4 +51,13 @@ export class TodosController {
             Pop.toast(error)
         }
     }
+
+    async deleteTodo(todoId) {
+        try {
+            console.log('delete this todo', todoId)
+            await todosService.deleteTodo(todoId)
+        } catch (error) {
+            Pop.toast(error)
+        }
+    }
 }

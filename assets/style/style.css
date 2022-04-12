@@ -35,6 +35,8 @@
     width: 100%;
 }
 
+
+
 /* REVIEW toggle display for the todo dropdown not working atm.. */
 /* .todo-menu {
     display: none;
@@ -66,6 +68,10 @@
 /* UTILS */
 .right {
     right: 0;
+}
+
+.bottom {
+    bottom: 0;
 }
 
 .display-none {
