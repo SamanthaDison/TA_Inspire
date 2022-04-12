@@ -4,16 +4,54 @@
     min-height: 85vh;
 }
 
+.todo-col {
+    position: absolute;
+    bottom: 4rem;
+}
 
 /* REVIEW need this div to not push the bottom row when display is toggled */
-.todos-display {
-    display: none;
-    /* position: absolute; */
+.todo-display {
+    background-color: rgb(0 0 0 / 58%);
+    border: 1px solid rgba(183, 183, 183, 0.621);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    width: 25vw;
+    min-height: 25vh;
+    color: whitesmoke;
+}
+
+.todo-button {
+    width: 7rem;
+    border-radius: 15px;
+    background-color: rgba(175, 153, 201, 0.561);
+    color: white;
+    border: none;
+}
+
+.todo-form {
+    pabbin
 }
 
 /* REVIEW will probably need to position-abosolute elems in this row... doing the whole row messes up formatting */
-/* .bottom-row {
+.bottom-row {
     display: flex;
     bottom: 0;
     position: absolute;
-} */
+}
+
+.quote-author {
+    display: none;
+}
+
+.quote:hover+.quote-author {
+    display: block;
+}
+
+/* UTILS */
+.right {
+    right: 0;
+}
+
+.display-none {
+    display: none;
+}
