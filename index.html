@@ -8,6 +8,7 @@
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css'>
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>TA_Inspire</title>
@@ -58,12 +59,28 @@
               <p>todos will go here</p>
               <p class="m-0">Get Motivated!</p>
               <p class="m-0 pb-2">Add a todo</p>
+              <!-- <div class="d-flex justify-content-between align-items-baseline todo-item">
+                <i class="mdi mdi-checkbox-blank text-white"
+                  onclick="app.todosController.completeTodo('${this.id}')"></i>
+                <p class="px-2">description</p>
+                <div class="dropdown">
+                  <div class="dropdown-toggle selectable text-end" data-bs-toggle="dropdown" aria-expanded="false"
+                    id="todoDropdown" title="todo">
+                    <span class="todo-menu hoverable">...</span>
+                  </div>
+                  <div class="dropdown-menu p-0" aria-labelledby="todoDropdown">
+                    <div class="hoverable selectable">
+                      Delete
+                    </div>
+                  </div>
+                </div>
+              </div> -->
               <button onclick="app.todosController.showTodoForm()" class="todo-button" id="todo-button">New
                 todo</button>
             </div>
             <div class="display-none px-2 pt-5" id="todo-form">
               <form onsubmit="app.todosController.createTodo()">
-                <input class="todo-form" type="text" name="todo" placeholder="New Todo">
+                <input class="todo-form" type="text" name="description" placeholder="New Todo">
               </form>
             </div>
           </div>

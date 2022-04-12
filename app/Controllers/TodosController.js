@@ -22,6 +22,11 @@ export class TodosController {
     createTodo() {
         window.event.preventDefault()
         let form = window.event.target
-
+        const newTodo = {
+            description: form.description.value
+        }
+        console.log('creating', newTodo)
+        todosService.createTodo(newTodo)
+        form.reset()
     }
 }

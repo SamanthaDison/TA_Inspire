@@ -35,6 +35,15 @@
     width: 100%;
 }
 
+/* REVIEW toggle display for the todo dropdown not working atm.. */
+/* .todo-menu {
+    display: none;
+}
+
+.todo-item:hover+.todo-menu {
+    display: block;
+} */
+
 ::placeholder {
     color: whitesmoke;
 }
@@ -61,4 +70,8 @@
 
 .display-none {
     display: none;
+}
+
+.hoverable {
+    cursor: pointer;
 }
