@@ -1,1 +1,19 @@
 /* BASIC STYLES HERE */
+
+.center-row {
+    min-height: 85vh;
+}
+
+
+/* REVIEW need this div to not push the bottom row when display is toggled */
+.todos-display {
+    display: none;
+    /* position: absolute; */
+}
+
+/* REVIEW will probably need to position-abosolute elems in this row... doing the whole row messes up formatting */
+/* .bottom-row {
+    display: flex;
+    bottom: 0;
+    position: absolute;
+} */
