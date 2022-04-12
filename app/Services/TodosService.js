@@ -1,10 +1,22 @@
+import { ProxyState } from "../AppState.js";
 import { api } from "./AxiosService.js";
+import { Todo } from "../Models/Todo.js";
 
 class TodosService {
+    async completeTodo(todoId) {
+        const todo = ProxyState.todos.find(t => t.id == todoId)
+        todo.completed = !todo.completed
+        const res = await api.put(`sammid/todos/${todoId}`, todo)
+        // const todoIndex = ProxyState.todos.findIndex(t => t.id == todoId)
+        // ProxyState.todos.splice(todoIndex, 1, new Todo(res.data))
+        ProxyState.todos = ProxyState.todos
+        this.getAllTodos()
+    }
 
     async getAllTodos() {
         const res = await api.get('sammid/todos')
-        console.log(res.data)
+        console.log('getting todos', res.data)
+        ProxyState.todos = res.data.map(t => new Todo(t))
     }
     createTodo(newTodo) {
         throw new Error("Method not implemented.");

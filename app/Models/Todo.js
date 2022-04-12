@@ -1,15 +1,15 @@
 // NOTE sorry for this note sam lol... need to have a display none on the id for my todos and on my onclick get elements and add style.display = "block"
 export class Todo {
-    constructor(data) {
-        this.id = data.id
-        this.complete = data.complete
-        this.user = data.user
-        this.description = data.description
-    }
+  constructor(data) {
+    this.id = data.id
+    this.completed = data.completed
+    this.user = data.user
+    this.description = data.description
+  }
 
-    get Template() {
-        return ` <div class="d-flex justify-content-between align-items-baseline todo-item">
-                <i class="mdi mdi-checkbox-${this.complete ? 'marked' : 'blank-outline'}"
+  get Template() {
+    return ` <div class="d-flex justify-content-between align-items-baseline todo-item p-2">
+                <i class="hoverable mdi mdi-checkbox-${this.completed ? 'marked' : 'blank-outline'}"
                   onclick="app.todosController.completeTodo('${this.id}')"></i>
                 <p class="px-2">${this.description}</p>
                 <div class="dropdown">
@@ -25,6 +25,6 @@ export class Todo {
                 </div>
               </div>
         `
-    }
+  }
 }
 
