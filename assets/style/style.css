@@ -29,6 +29,13 @@
 }
 
 .todo-form {
+    position: fixed;
+    bottom: 1em;
+
+    width: 96%;
+}
+
+.todo-input {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid rgb(121, 119, 119);

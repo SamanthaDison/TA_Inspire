@@ -8,7 +8,7 @@ export class Todo {
   }
 
   get Template() {
-    return ` <div class="d-flex justify-content-between align-items-baseline todo-item p-2">
+    return ` <div class="d-flex justify-content-between align-items-baseline todo-item ">
                 <i class="hoverable mdi mdi-checkbox-${this.completed ? 'marked' : 'blank-outline'}"
                   onclick="app.todosController.completeTodo('${this.id}')"></i>
                 <p class="px-2">${this.description}</p>

@@ -18,8 +18,11 @@ class TodosService {
         console.log('getting todos', res.data)
         ProxyState.todos = res.data.map(t => new Todo(t))
     }
-    createTodo(newTodo) {
-        throw new Error("Method not implemented.");
+    async createTodo(newTodo) {
+        const res = await api.post('sammid/todos', newTodo)
+        console.log('new todo', res.data);
+        let createdTodo = new Todo(res.data)
+        ProxyState.todos = [createdTodo, ...ProxyState.todos]
     }
 
     async deleteTodo(todoId) {

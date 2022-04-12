@@ -55,7 +55,7 @@
       <div class="row justify-content-end" id="todo-row">
         <div class="col-4 d-flex justify-content-end todo-col">
           <div class=" todo-display p-2" id="todo-display">
-            <div class="text-center" id="todo-list">
+            <div class="text-center pb-5 px-2 pt-2" id="todo-list">
               <p>todos will go here</p>
               <p class="m-0">Get Motivated!</p>
               <p class="m-0 pb-2">Add a todo</p>
@@ -78,9 +78,9 @@
               <button onclick="app.todosController.showTodoForm()" class="todo-button" id="todo-button">New
                 todo</button>
             </div>
-            <div class=" px-2" id="todo-form">
+            <div class="display-none todo-form mt-5" id="todo-form">
               <form onsubmit="app.todosController.createTodo()">
-                <input class="todo-form" type="text" name="description" placeholder="New Todo">
+                <input class="todo-input" type="text" name="description" placeholder="New Todo">
               </form>
             </div>
           </div>

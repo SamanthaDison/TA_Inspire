@@ -7,9 +7,18 @@ import { Pop } from "../Utils/Pop.js";
 function _drawTodos() {
     let todos = ProxyState.todos
     if (todos.length > 0) {
+        document.getElementById('todo-form').style.display = "block";
         let template = ''
         todos.forEach(t => template += t.Template)
         document.getElementById('todo-list').innerHTML = template
+    } else {
+        document.getElementById('todo-form').style.display = "none";
+        document.getElementById('todo-list').innerHTML = `<p>todos will go here</p>
+            <p class="m-0">Get Motivated!</p>
+              <p class="m-0 pb-2">Add a todo</p>
+             
+              <button onclick="app.todosController.showTodoForm()" class="todo-button" id="todo-button">New
+                todo</button>`
     }
 }
 export class TodosController {
