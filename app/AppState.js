@@ -8,8 +8,8 @@ class AppState extends EventEmitter {
   image = null
   quote = null
   weather = null
-
   isFahrenheit = true
+  user = null
 
 
 }

@@ -17,6 +17,7 @@ function _drawTodos() {
         document.getElementById('todo-list').innerHTML = template
     } else {
         document.getElementById('todo-form').style.display = "none";
+        document.getElementById('todo-count').style.display = "none";
         document.getElementById('todo-list').innerHTML = `
             <p class="m-0 pt-4">Get Motivated!</p>
               <p class="m-0 pb-2">Add a todo</p>
