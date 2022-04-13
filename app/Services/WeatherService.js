@@ -9,6 +9,12 @@ class WeatherService {
         ProxyState.weather = new Weather(res.data)
         console.log(ProxyState.weather)
     }
+    switchTemperature() {
+        let isFahrenheit = ProxyState.isFahrenheit
+        isFahrenheit = !isFahrenheit
+        ProxyState.isFahrenheit = isFahrenheit
+        console.log(isFahrenheit)
+    }
 }
 
 export const weatherService = new WeatherService()

@@ -2,15 +2,15 @@ import { ProxyState } from "../AppState.js";
 import { weatherService } from "../Services/WeatherService.js";
 
 
-let isFahrenheit = true
 function _drawWeather() {
     let weather = ProxyState.weather
+    let isFahrenheit = ProxyState.isFahrenheit
     document.getElementById('icon').src = weather.icon
-    if (isFahrenheit = true) {
-        document.getElementById('temperature').innerText = weather.Fahrenheit
+    if (isFahrenheit) {
+        document.getElementById('temperature').innerText = weather.Fahrenheit + 'F'
         return
     }
-    document.getElementById('temperature').innerText = weather.Celsius
+    document.getElementById('temperature').innerText = weather.Celsius + 'C'
 
 }
 export class WeatherController {
@@ -18,13 +18,14 @@ export class WeatherController {
         console.log('weather controller');
         weatherService.getWeather()
         ProxyState.on('weather', _drawWeather)
+        ProxyState.on('isFahrenheit', _drawWeather)
     }
 
+    // TODO get toggle temperature function working
     switchTemperature() {
-        debugger
+        // debugger
         console.log('switch temp')
-        isFahrenheit = !isFahrenheit
-        _drawWeather()
+        weatherService.switchTemperature()
     }
 
 }
