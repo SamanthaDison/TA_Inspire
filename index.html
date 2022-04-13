@@ -55,15 +55,15 @@
           <div class="text-center text-white fw-bolder pb-5">
             <h1 class="clock" id="clock"></h1>
             <!-- TODO handle form input for name and save to local storage -->
-            <div class="d-flex justify-content-center align-baseline">
-              <p class="greeting m-0">hello</p>
-              <input class="name-input mb-2" type="text" name="name">
+            <div class="d-flex justify-content-center">
+              <p class="greeting m-0 pe-3">hello</p>
+              <input class="name-input  text-white" type="text" name="name">
             </div>
           </div>
         </div>
       </div>
-      <div class="row justify-content-end" id="todo-row">
-        <div class="col-4 d-flex justify-content-end todo-col">
+      <div class="row justify-content-end " id="todo-row">
+        <div id="todo-collapse" class="col-4 todo-col collapse">
           <div class=" todo-display p-2" id="todo-display">
             <p class="text-center display-none pt-1" id="todo-count">Todos: <span id="completed">4</span>/<span
                 id="total">6</span></p>
@@ -106,7 +106,8 @@
         </div>
         <div class="col-1 justify-content-end bottom-row right pb-2">
           <!-- on click toggle display of the todos div -->
-          <button onclick="app.todosController.showTodos()" class="todo-toggle fs-5">Todo</button>
+          <button data-bs-toggle="collapse" data-bs-target="#todo-collapse" class="todo-toggle fs-5">Todo</button>
+          <!-- <button onclick="app.todosController.showTodos()" class="todo-toggle fs-5">Todo</button> -->
         </div>
       </div>
     </div>

@@ -27,6 +27,12 @@ body {
     border-bottom: 1px solid white;
 }
 
+.name-input:focus {
+    background-color: transparent;
+    outline: none;
+    border-bottom: 1px solid white;
+}
+
 .todo-col {
     position: absolute;
     bottom: 4rem;
@@ -40,6 +46,7 @@ body {
     width: 20vw;
     min-height: 20vh;
     color: whitesmoke;
+    margin-left: auto;
 }
 
 .todo-button {
@@ -53,7 +60,6 @@ body {
 .todo-form {
     position: fixed;
     bottom: 1em;
-
     width: 96%;
 }
 
@@ -63,6 +69,12 @@ body {
     border-bottom: 1px solid rgb(121, 119, 119);
     width: 100%;
     color: white;
+}
+
+.todo-input:focus {
+    background-color: transparent;
+    outline: none;
+    border-bottom: 1px solid white;
 }
 
 .todo-toggle {
