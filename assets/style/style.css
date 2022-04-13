@@ -1,5 +1,9 @@
 /* BASIC STYLES HERE */
 
+body {
+    background-size: cover;
+}
+
 .weather-icon {
     height: 45px;
     width: 45px;
@@ -7,6 +11,14 @@
 
 .center-row {
     min-height: 85vh;
+}
+
+.clock {
+    font-size: 10em;
+}
+
+.greeting {
+    font-size: 2.5em;
 }
 
 .todo-col {
@@ -20,8 +32,8 @@
     border: 1px solid rgba(183, 183, 183, 0.621);
     backdrop-filter: blur(5px);
     border-radius: 5px;
-    width: 25vw;
-    min-height: 25vh;
+    width: 20vw;
+    min-height: 20vh;
     color: whitesmoke;
 }
 
@@ -62,7 +74,6 @@
     color: whitesmoke;
 }
 
-/* REVIEW will probably need to position-abosolute elems in this row... doing the whole row messes up formatting */
 .bottom-row {
     display: flex;
     bottom: 0;
@@ -70,11 +81,15 @@
 }
 
 .quote-author {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity .1s linear;
 }
 
 .quote:hover+.quote-author {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+
 }
 
 /* UTILS */
