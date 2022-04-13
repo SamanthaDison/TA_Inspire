@@ -6,8 +6,12 @@ import { Pop } from "../Utils/Pop.js";
 
 function _drawTodos() {
     let todos = ProxyState.todos
+    let completedTodos = ProxyState.todos.filter(t => t.completed == true)
     if (todos.length > 0) {
         document.getElementById('todo-form').style.display = "block";
+        document.getElementById('todo-count').style.display = "block";
+        document.getElementById('completed').innerText = completedTodos.length.toString()
+        document.getElementById('total').innerText = todos.length.toString()
         let template = ''
         todos.forEach(t => template += t.Template)
         document.getElementById('todo-list').innerHTML = template
