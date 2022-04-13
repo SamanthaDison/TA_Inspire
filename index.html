@@ -35,24 +35,24 @@
   }
 </style>
 
-<body class="debug">
+<body>
 
   <main>
     <div class="container-fluid">
       <div class="row justify-content-end">
         <div class="col-2 d-flex justify-content-end">
-          <div>
-            <div onclick="app.weatherController.switchTemperature()" class=" d-flex align-items-center">
+          <div class="text-white fw-bold">
+            <div onclick="app.weatherController.switchTemperature()" class=" d-flex align-items-center hoverable">
               <img class="weather-icon" id="icon" src="" alt="">
               <p class="m-0 fs-3"> <span id="temperature"></span>&deg;</p>
             </div>
-            <p class="ps-5">Boise</p>
+            <p class="ps-5"><small>Boise</small></p>
           </div>
         </div>
       </div>
       <div class="row center-row align-items-center">
         <div class="col-12 d-flex justify-content-center">
-          <div class="text-center text-white pb-5">
+          <div class="text-center text-white fw-bolder pb-5">
             <h1 class="clock" id="clock"></h1>
             <p class="greeting">hello name input here</p>
           </div>
@@ -93,14 +93,14 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-7 justify-content-center bottom-row">
-          <div class=" text-white text-center">
-            <p class="quote m-0">"<span id="quote"></span>"</p>
+          <div class="text-center pb-1">
+            <p class="quote m-0 text-white">"<span id="quote"></span>"</p>
             <p class="quote-author m-0" id="quote-author"></p>
           </div>
         </div>
         <div class="col-1 justify-content-end bottom-row right pb-2">
           <!-- on click toggle display of the todos div -->
-          <button onclick="app.todosController.showTodos()" class="btn btn-primary rounded">Todo</button>
+          <button onclick="app.todosController.showTodos()" class="todo-toggle fs-5">Todo</button>
         </div>
       </div>
     </div>

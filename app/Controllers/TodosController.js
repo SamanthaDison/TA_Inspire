@@ -62,8 +62,10 @@ export class TodosController {
 
     async deleteTodo(todoId) {
         try {
-            console.log('delete this todo', todoId)
-            await todosService.deleteTodo(todoId)
+            if (await Pop.confirm("Would you like to delete this todo?")) {
+                console.log('delete this todo', todoId)
+                await todosService.deleteTodo(todoId)
+            }
         } catch (error) {
             Pop.toast(error)
         }
