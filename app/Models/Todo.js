@@ -13,7 +13,7 @@ export class Todo {
                   onclick="app.todosController.completeTodo('${this.id}')"></i>
                 <p class="px-2">${this.description}</p>
                 <div class="dropdown">
-                  <div class="dropdown-toggle selectable text-end" data-bs-toggle="dropdown" aria-expanded="false"
+                  <div class="selectable text-end" data-bs-toggle="dropdown" aria-expanded="false"
                     id="todoDropdown" title="todo">
                     <span class="todo-menu hoverable">...</span>
                   </div>

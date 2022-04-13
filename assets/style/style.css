@@ -1,5 +1,10 @@
 /* BASIC STYLES HERE */
 
+.weather-icon {
+    height: 45px;
+    width: 45px;
+}
+
 .center-row {
     min-height: 85vh;
 }

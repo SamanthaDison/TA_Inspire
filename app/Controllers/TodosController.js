@@ -13,10 +13,9 @@ function _drawTodos() {
         document.getElementById('todo-list').innerHTML = template
     } else {
         document.getElementById('todo-form').style.display = "none";
-        document.getElementById('todo-list').innerHTML = `<p>todos will go here</p>
-            <p class="m-0">Get Motivated!</p>
+        document.getElementById('todo-list').innerHTML = `
+            <p class="m-0 pt-4">Get Motivated!</p>
               <p class="m-0 pb-2">Add a todo</p>
-             
               <button onclick="app.todosController.showTodoForm()" class="todo-button" id="todo-button">New
                 todo</button>`
     }
