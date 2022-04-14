@@ -11,4 +11,5 @@ export function loadState() {
     if (data != null) {
         ProxyState.user = data.user
     }
+    console.log('load user', ProxyState.user)
 }

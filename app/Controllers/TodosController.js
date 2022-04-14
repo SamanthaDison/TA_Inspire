@@ -7,6 +7,7 @@ import { Pop } from "../Utils/Pop.js";
 function _drawTodos() {
     let todos = ProxyState.todos
     let completedTodos = ProxyState.todos.filter(t => t.completed == true)
+
     if (todos.length > 0) {
         document.getElementById('todo-form').style.display = "block";
         document.getElementById('todo-count').style.display = "block";
@@ -28,7 +29,9 @@ function _drawTodos() {
 export class TodosController {
     constructor() {
         console.log('todos controller');
-        todosService.getAllTodos();
+        // ProxyState.on('user', this.getAllTodos)
+        // ProxyState.on('user', _drawTodos)
+        this.getAllTodos()
         ProxyState.on('todos', _drawTodos)
     }
 
@@ -54,6 +57,15 @@ export class TodosController {
         console.log('creating', newTodo)
         todosService.createTodo(newTodo)
         form.reset()
+    }
+
+    async getAllTodos() {
+        try {
+            console.log('getting todos')
+            await todosService.getAllTodos()
+        } catch (error) {
+            Pop.toast(error)
+        }
     }
 
     async completeTodo(todoId) {
