@@ -5,6 +5,7 @@ import { TodosController } from "./Controllers/TodosController.js";
 import { UserController } from "./Controllers/UserController.js";
 import { ValuesController } from "./Controllers/ValuesController.js";
 import { WeatherController } from "./Controllers/WeatherController.js";
+import { loadState } from "./Utils/LocalStorage.js";
 
 class App {
   weatherController = new WeatherController()
@@ -14,5 +15,5 @@ class App {
   clockController = new ClockController()
   userController = new UserController()
 }
-
+loadState()
 window["app"] = new App();

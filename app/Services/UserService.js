@@ -1,10 +1,10 @@
-import { ProxyState } from "../AppState"
+import { ProxyState } from "../AppState.js"
 
 
 class UserService {
     createUser(newUser) {
-        ProxyState.user = newUser()
-        // ProxyState.user 
+        ProxyState.user = newUser
+        console.log(ProxyState.user)
     }
 
 }
