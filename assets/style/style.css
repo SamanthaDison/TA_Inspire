@@ -25,6 +25,8 @@ body {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid white;
+    font-size: 2.5em;
+    width: 5em;
 }
 
 .name-input:focus {

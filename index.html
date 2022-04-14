@@ -57,7 +57,11 @@
             <!-- TODO handle form input for name and save to local storage -->
             <div class="d-flex justify-content-center">
               <p class="greeting m-0 pe-3">hello</p>
-              <input class="name-input  text-white" type="text" name="name">
+              <div id="userName">
+                <form onsubmit="app.userController.createUser()">
+                  <input class="name-input  text-white" type="text" name="name">
+                </form>
+              </div>
             </div>
           </div>
         </div>
