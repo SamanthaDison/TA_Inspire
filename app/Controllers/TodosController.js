@@ -7,8 +7,14 @@ import { Pop } from "../Utils/Pop.js";
 function _drawTodos() {
     let todos = ProxyState.todos
     let completedTodos = ProxyState.todos.filter(t => t.completed == true)
-
-    if (todos.length > 0) {
+    const user = ProxyState.user
+    // if (user == null) {
+    //     document.getElementById('todo-list').innerHTML = `
+    //         <p class="m-0 pt-4">Get Motivated!</p>
+    //           <p class="m-0 pb-2">Enter a name to create a todo</p>`
+    //     return
+    // }
+    if (user != null && todos.length > 0) {
         document.getElementById('todo-form').style.display = "block";
         document.getElementById('todo-count').style.display = "block";
         document.getElementById('completed').innerText = completedTodos.length.toString()
@@ -29,10 +35,11 @@ function _drawTodos() {
 export class TodosController {
     constructor() {
         console.log('todos controller');
-        // ProxyState.on('user', this.getAllTodos)
-        // ProxyState.on('user', _drawTodos)
-        this.getAllTodos()
+        ProxyState.on('user', this.getAllTodos)
+        ProxyState.on('user', _drawTodos)
         ProxyState.on('todos', _drawTodos)
+        this.getAllTodos()
+
     }
 
     showTodos() {
@@ -60,11 +67,14 @@ export class TodosController {
     }
 
     async getAllTodos() {
-        try {
-            console.log('getting todos')
-            await todosService.getAllTodos()
-        } catch (error) {
-            Pop.toast(error)
+        const user = ProxyState.user
+        if (user != null) {
+            try {
+                console.log('getting todos')
+                await todosService.getAllTodos()
+            } catch (error) {
+                Pop.toast(error)
+            }
         }
     }
 
