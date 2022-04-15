@@ -21,7 +21,6 @@ export class WeatherController {
         ProxyState.on('isFahrenheit', _drawWeather)
     }
 
-    // TODO get toggle temperature function working
     switchTemperature() {
         // debugger
         console.log('switch temp')
